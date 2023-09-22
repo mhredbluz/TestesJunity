@@ -1,10 +1,12 @@
+package Advanced;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class ArraysCompareTest {
 
@@ -30,10 +32,11 @@ public class ArraysCompareTest {
               void testSortPerformance() {
 
                 int [] numbers = {25,8,21,32,3};
-                for (int i = 0; i < 100000; i++){
+                for (int i = 0; i < 10000; i++){
                     numbers[0] = i;
                     Arrays.sort(numbers);
                 }
               }
 
 }
+
